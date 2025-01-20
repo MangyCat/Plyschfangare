@@ -43,6 +43,7 @@ All stuffed animal images are from IKEA's webshop **Soft toy** category and were
 - [Lilleplutt](https://www.ikea.com/us/en/p/lilleplutt-soft-toy-cat-gray-white-60260453/)
 - [Aftonsparv](https://www.ikea.com/us/en/p/aftonsparv-soft-toy-mini-alien-green-70562431/)
 - [The Bucket](https://www.ikea.com/gb/en/p/frakta-carrier-bag-large-blue-17228340/)
+
 **Note:** This game is not affiliated with [IKEA](https://www.ikea.com/).
 
 ---
