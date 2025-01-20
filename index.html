@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plyschfangare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/toastify.min.css"/>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #87cefa, #f0f8ff);
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 5px solid #000000;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        #scoreBoard {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 24px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        #storeButton, #leaderboardButton {
+            position: absolute;
+            top: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+        }
+        #storeButton {
+            right: 190px;
+            background: #ffd700;
+        }
+        #storeButton:hover {
+            background: #ffc700;
+        }
+        #leaderboardButton {
+            right: 10px;
+            background: #32cd32;
+        }
+        #leaderboardButton:hover {
+            background: #28a428;
+        }
+        #store, #leaderboard {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            display: none;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+        .storeItem {
+            margin: 15px 0;
+        }
+        .storeItem img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-radius: 8px;
+        }
+        .storeItem button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #00bfff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .storeItem button:hover {
+            background: #00a1e6;
+        }
+        h2 {
+            color: #333;
+            font-size: 28px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+        #leaderboard-section {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        #leaderboard-section input,
+        #leaderboard-section button {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="scoreBoard">Score: <span id="score">0</span></div>
+    <div id="storeButton" onclick="openStore()">Store</div>
+    <div id="leaderboardButton" onclick="openLeaderboard()">Leaderboard</div>
+    <div id="store">
+        <h2>Item Store</h2>
+        <p>Current Score: <span id="storeScore">0</span></p>
+        <div class="storeItem">
+            <img src="assets/bucket.png" alt="Bigger Bucket">
+            <button onclick="buyBiggerBucket()">Buy Bigger Bucket (100 Points)</button>
+        </div>
+        <div class="storeItem">
+            <img src="assets/exterminator.png" alt="Evil Blahaj Exterminator">
+            <button onclick="buyExterminator()">Buy Evil Blahaj Exterminator (200 Points)</button>
+        </div>
+        <div class="storeItem">
+            <img src="assets/blahaj1.png" alt="Friendlier Blahaj">
+            <button onclick="buyFriendlyEvilBlahaj()">Buy Friendlier Blahaj (150 Points)</button>
+        </div>
+        <button onclick="closeStore()">Close Store</button>
+    </div>
+    <div id="leaderboard">
+        <h2>Submit Your Score</h2>
+        <input type="text" id="player-name" placeholder="Enter your name">
+        <button onclick="submitScore()">Submit Score</button>
+        <h2>Leaderboard</h2>
+        <ul id="leaderboardList"></ul>
+        <button onclick="closeLeaderboard()">Close Leaderboard</button>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/toastify.min.js"></script>
+    <script src="store.js"></script>
+    <script src="game.js"></script>
+    <script src="leaderboard.js"></script>
+</body>
+</html>
