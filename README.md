@@ -1,4 +1,4 @@
-# Plyschfangare - Plushie Catcher 🧸
+# Plyschfangare - Plushy Catcher 🧸
 
 Plyschfangare is an IKEA-inspired game where you catch various stuffed animals, earn points to spend at a shop, and flex your skills on the leaderboard. 💪
 
