@@ -11,7 +11,7 @@ Plyschfangare is an IKEA-inspired game where you catch various stuffed animals, 
 
 ## How to Play 🕹️
 
-1. You can play on the website [Plyschfangare](https://placeholdernowebsiteyet.net).
+1. You can play on the website [Plyschfangare](https://mangycat.github.io/Plyschfangare/).
 2. Use the arrow keys to navigate.
 3. Purchase upgrades in the shop to gain advantages (or disadvantages, you'll see).
 4. Catch plushies for points.
