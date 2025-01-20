@@ -31,7 +31,7 @@ There were also useful items called cart tokens, which unlocked more carts and m
 
 1. **Play the game and achieve your highest score.**
 2. **Enter your name** in the input field provided. Be nice!
-3. **Click "Submit Score"** to submit your score to the leaderboard.
+3. **Click "Submit Score"** to submit your score to the leaderboard. **Due to unreliable server hosts, leaderboards do not work at this time**
 
 ## Credits 🏢
 

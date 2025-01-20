@@ -1,5 +1,5 @@
 //can be ngrok url, anything, jsut that it connects to backend port in some shape or form at the end of the day
-const backendUrl = 'http://192.168.1.100:3000';
+const backendUrl = '';
 
 // submit score
 async function submitScore() {//spam if you hate tacos
